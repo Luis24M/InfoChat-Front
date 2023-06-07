@@ -1,0 +1,164 @@
+/* Importar fuentes de Google */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  /* Reiniciar estilos predeterminados */
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Aplicar la fuente "Poppins" a todos los elementos */
+}
+
+body {
+  background: rgb(233, 233, 233); /* Establecer el color de fondo del cuerpo */
+}
+/* quiero que el header sea un bloque vertical y no haya nada por detras de este, todo el contenido debe estar del lado derecho */
+header {
+  width: 100%;
+  /* height: 100vh; */
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff; /* Establecer el color de fondo de la barra de navegación */
+  width: 90px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+ul {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.chat-item {
+  position: relative;
+  top: 60px;
+}
+
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+}
+
+.fas {
+  position: inherit;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-title {
+  position: relative;
+  top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+a:hover {
+  background: #eee;
+}
+
+nav:hover {
+  width: 280px;
+  transition: all 0.5s ease;
+}
+
+main {
+  max-width: 1000px;
+  height: 90vh;
+  margin: 20px auto;
+  padding: 20px;
+  padding-left: 110px;
+}
+
+#chatbot-container {
+  border: 1px solid #ccc;
+  height: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+#chat-log {
+  height: 93%;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+#user-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ 
+.message {
+  background-color: #007bff;
+  color: #fff;
+  width: fit-content;
+  margin: 25px;
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 5px;
+}
+
+.reply {
+  background-color: #ffffff;
+  color: #333;
+  width: 50%;
+  margin: 25px;
+  margin-right: auto;
+  padding: 5px 10px;
+  border-radius: 5px 5px 5px 0;
+}
+
