@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     // Manejo del envío del formulario de inicio de sesión
-    loginForm.addEventListener("submit", function(event) {
+    /*loginForm.addEventListener("submit", function(event) {
       event.preventDefault();
   
       var username = document.getElementById("username").value;
@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // ...
   
       loginForm.reset();
-    });
+    });*/
   });
   
