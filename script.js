@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
         // Enviar la consulta del usuario al backend (Flask)
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:5000/chat", true);
+        xhr.open("POST", "https://chatbot-3xf7.onrender.com/chat", true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function() {
           if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
