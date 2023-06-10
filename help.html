@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <script src="script.js" defer></script>
+    <script src="scriptComment.js" defer></script>
   </head>
   <body>
     <header>
@@ -106,14 +106,16 @@
       </section>
       <section>
         <h2>Dejar una queja o comentario</h2>
-        <form action="submit_comment.php" method="post">
+        <form id="comment-form" action="submit_comment.php" method="post">
           <textarea
+            id="comment-input"
             name="comment"
             rows="4"
             placeholder="Escribe tu queja o comentario aquí"
           ></textarea>
-          <input type="text" name="name" placeholder="Tu nombre" required />
+          <input id="name-input" type="text" name="name" placeholder="Tu nombre" required />
           <input
+            id="email-input"
             type="email"
             name="email"
             placeholder="Tu correo electrónico"
