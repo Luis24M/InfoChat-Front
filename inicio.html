@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />    
+    <meta charset="UTF-8" />
     <link rel="icon" href="img/icono2.png" type="image/x-icon" />
     <title>InfoChat</title>
-    <link rel="stylesheet" href="styleHelp.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,14 +36,11 @@
         </nav>
     </header>
     <main>
-        <h1>Contacto</h1>
-        <section>
-            <ul class="contact">
-                <li><i class="fas fa-envelope"></i> Correo electrónico: infochat@example.com</li>
-                <li><i class="fas fa-phone"></i> Teléfono: +1234567890</li>
-                <li><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal 123, Ciudad, País</li>
-            </ul>
-        </section>
+        <h1>Bienvenido a InfoChat</h1>
+        <div id="chatbot-container">
+            <div id="chat-log"></div>
+            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+        </div>
     </main>
 </body>
 </html>

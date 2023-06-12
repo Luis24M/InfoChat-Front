@@ -1,51 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="img/icono2.png" type="image/x-icon" />
     <title>InfoChat</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <script src="script.js" defer></script>
+    <script src="scriptLogin.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html"  class="logo">
-                    <img src="img/logo.jpg" alt="logo InfoChat">
-                    <span class="nav-title">InfoChat</span>
-                    </a>
-                </li>
-                <li><a href="contact.html">
-                    <i class="fas fa-address-card"></i>
-                    <span class="nav-item">Contacto</span>
-                </a>
-                <!-- <li><a href="#" class="foot">
-                    <i class="fas fa-cog"></i>
-                    <span class="nav-item">Setting</span>
-                </a>
-                </li> -->
-                <li><a href="help.html" class="foot">
-                    <i class="fas fa-question-circle"></i>
-                    <span class="nav-item">Ayuda</span>
-                </a>
-                </li>
-                <li><a href="login.html" class="foot">
-                    <i class="fas fa-sign-in-alt"></i>
-                    <span class="nav-item">Login</span>
-                </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Bienvenido a InfoChat</h1>
-        <div id="chatbot-container">
-            <div id="chat-log"></div>
-            <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Iniciar Sesion</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">E-mail</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""> <a href="recuperaContraseña.html">¿Olvidaste tu contraseña?</a></label>
+                      
+                    </div>
+                    <button>Iniciar Sesión</button>
+                    <div class="register">
+                        <p>No tienes una cuenta <a href="registrarse.html">Registrarse</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-    </main>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scriptLogin.js" defer></script>
 </body>
 </html>
