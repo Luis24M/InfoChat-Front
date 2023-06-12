@@ -1,50 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener los elementos del formulario
     const form = document.querySelector('form');
     const emailInput = document.querySelector('input[type="email"]');
     const passwordInput = document.querySelector('input[type="password"]');
-  
-    // Manejar el evento submit del formulario
+    const errorMessage = document.getElementById('error-message');
+    
     form.addEventListener('submit', async (event) => {
-      event.preventDefault(); // Evitar el envío del formulario por defecto
-  
+      event.preventDefault();
+    
       const email = emailInput.value;
       const password = passwordInput.value;
-  
+    
       try {
-        // Enviar la solicitud de inicio de sesión al backend
-        const response = await axios.post('http://localhost:5000/login', { email, password });
-  
-        // Mostrar la respuesta del backend
-        // alert(response.data.message);
-        // Aquí puedes redirigir al usuario a otra página si el inicio de sesión es exitoso
+        const response = await axios.post('https://chatbot-3xf7.onrender.com/login', { email, password });
+    
         if (response.data.message === 'Login successful') {
           window.location.href = 'inicio.html';
+        } else {
+          showErrorMessage('Invalid email or password');
         }
       } catch (error) {
-        // Mostrar el mensaje de error si la solicitud falla
-        if (error.response) {
-          alert(error.response.data.message);
-        } else {
-        //   alert('Error de conexión');
-        }
+        showErrorMessage('Error de conexión');
       }
     });
-  });
   
-  // Verificar el estado de autenticación al cargar la página de inicio
-  document.addEventListener("DOMContentLoaded", function() {
-    // Hacer una solicitud al backend para verificar el estado de autenticación
-    axios.get('http://localhost:5000/check_auth')
-      .then((response) => {
-        // Si el usuario no está autenticado, redirigirlo a la página de inicio de sesión
-        if (!response.data.authenticated) {
-          window.location.href = 'index.html';
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        // alert('Error de conexión');
-      });
+    function showErrorMessage(message) {
+      errorMessage.textContent = message;
+      errorMessage.style.display = 'block';
+      errorMessage.style.opacity = '1';
+      errorMessage.style.color = 'white';
+      errorMessage.style.paddingBottom = '20px';
+      errorMessage.style.textAlign = 'center';
+    }
   });
   

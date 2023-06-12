@@ -19,7 +19,7 @@ section{
 }
 .form-box{
     position: relative;
-    width: 400px;
+    width: 30%;
     height: 450px;
     background: rgba(0, 0, 0, 0.373);
     border: 2px solid rgba(255,255,255,0.5);
@@ -38,7 +38,7 @@ h2{
 .inputbox{
     position: relative;
     margin: 30px 0;
-    width: 310px;
+    width: 100%;
     border-bottom: 2px solid #fff;
 }
 .inputbox label{
@@ -115,4 +115,18 @@ button{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+#login-form{
+    height: 500px;
+    width: 30%;
+}
+
+#register-form{
+    height: 600px;
+    width: 30%;
+}
+
+.form-box h2{
+    margin-left: 50px;
+    margin-right: 50px;
 }
